@@ -1,0 +1,40 @@
+body{
+  border-style:groove;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32 px 0 rgba(0, 0, 0, 0.37);
+}
+.filasColumnas{
+  border-radius: 10px;
+  border-style: groove;
+}
+
+.button{
+  border-radius: 10px;
+  border-style: groove;
+}
+
+nav a {
+    display: inline-block;
+    color: #000;
+    background: #dbeccd;
+    padding: 0.5rem 1rem;
+    width: 5rem;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  
+nav a.active {
+  background-color: #4caf50;
+  color: white;
+  font-weight: 500;
+}
+
+nav a:hover:not(.active) {
+  background-color: #8cad70;
+  color: white;
+}
+  

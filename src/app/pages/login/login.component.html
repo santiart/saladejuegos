@@ -1,0 +1,50 @@
+<div class="pt-5" align="center">
+    <main class="form-signin w-100 m-auto">
+      <form [formGroup]="loginForm" novalidate>
+          <div class="imagen">
+            <img class="mb-4" src="../../../assets/user.png" alt="" width="72" height="57">
+          </div>
+        <h1 class="h3 mb-3 fw-normal" style="color: white;">Por favor, ingrese a su cuenta</h1>
+    
+        <div class="form-floating">
+          <input type="email" class="form-control" formControlName="email" placeholder="nombre@ejemplo.com">
+          <label for="floatingInput">Email</label>
+          <div *ngIf="this.loginForm.controls?.['email']?.invalid && this.loginForm.controls?.['email']?.touched">
+            <h6 *ngIf="errorControl['email'].errors?.['required']">
+              Este campo está vacío
+            </h6>
+            <h6 *ngIf="errorControl['email'].errors?.['pattern']">
+            Formato no válido
+            </h6>
+          </div>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" formControlName="password" placeholder="Contraseña">
+          <label for="floatingPassword">Contraseña</label>
+          <div *ngIf="this.loginForm.controls?.['password']?.touched && this.loginForm.controls?.['password']?.invalid">
+            <h6 *ngIf="errorControl['password'].errors?.['required']">
+              Este campo está vacío
+            </h6>
+            <h6 *ngIf="errorControl['password'].errors?.['pattern']">
+              La contraseña debería ser de 8 dígitos y contener al menos:
+              Un caracter, Una letra mayúscula, Un número
+            </h6>
+          </div>
+        </div>
+    
+        <div class="form-check text-start my-3">
+          <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Recuérdame
+          </label>
+        </div>
+      </form>
+        <button class="btn btn-primary w-100 py-2" type="submit" (click)="LogIn()">Ingresar</button>
+              
+        <div class="form-group" style="color: white;">
+          ¿No tienes una cuenta?
+          <a routerLink="/registro" routerLinkActive="active" ariaCurrentWhenActive="page">Registrarse</a>
+        </div>
+        <p style="color: white;" class="mt-5 mb-3 text-body-secondary">&copy; 2024</p>
+    </main>  
+  </div>

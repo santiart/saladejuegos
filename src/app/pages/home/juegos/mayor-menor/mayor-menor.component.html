@@ -1,0 +1,101 @@
+<div class="juego">
+    @if (started == false || termino==true) {
+        <div class="pt-2" align="center">
+            <div class="form-control h-100 mt-4" style="width: 30%; max-width: 400px;min-width: 300px;">
+                <p style="color: white">
+                    EXPLICACIÓN DEL JUEGO<br>
+                    Te va a aparecer una carta y tenés que elegir si la que le sigue es mayor o menor.
+                    ¿Preparado?
+                </p>
+            </div>
+            <br><br>
+            <div>
+                <button class="boton" (click)="sortearcartas()" >JUGAR</button>
+            </div>
+        </div>
+    }
+
+    @else if(started == true || termino == false || termino == true) {
+        <div class="pregunta">
+            <p style="color: white; font-size:x-large; text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;"> Teniendo en cuenta esta carta que salió ahora, ¿dirías que la siguiente carta es Mayor o Menor a esta?</p>
+            <br>
+        </div>
+        @switch (dato[0]) {
+            @case (1) {
+                <div class=" cartas p-2">
+                    <img id="A" src="../../../../../assets/cartas/1.png" width="300" height="375">
+                </div>
+            }
+            @case (2) {
+                <div class="cartas p-2">
+                    <img id="2" src="../../../../../assets/cartas/2.png" width="300" height="375">
+                </div>
+            }
+            @case (3) {
+                <div class="cartas p-2">
+                    <img id="3" src="../../../../../assets/cartas/3.png" width="300" height="375">
+                </div>
+            }
+            @case (4) {
+                <div class="cartas p-2">
+                    <img id="4" src="../../../../../assets/cartas/4.png" width="300" height="375">
+                </div>
+            }
+            @case (5) {
+                <div class="cartas p-2">
+                    <img id="5" src="../../../../../assets/cartas/5.png" width="300" height="375">
+                </div>
+            }
+            @case (6) {
+                <div class="cartas p-2">
+                    <img id="6" src="../../../../../assets/cartas/6.png" width="300" height="375">
+                </div>
+            }
+            @case (7) {
+                <div class="cartas p-2">
+                    <img id="7" src="../../../../../assets/cartas/7.png" width="300" height="375">
+                </div>
+            }
+            @case (8) {
+                <div class="cartas p-2">
+                    <img id="8" src="../../../../../assets/cartas/8.png" width="300" height="375">
+                </div>
+            }
+            @case (9) {
+                <div class="cartas p-2">
+                    <img id="9" src="../../../../../assets/cartas/9.png" width="300" height="375">
+                </div>
+            }            
+            @case (10) {
+                <div class="cartas p-2">
+                    <img id="10" src="../../../../../assets/cartas/10.png" width="300" height="375">
+                </div>
+            }               
+            @case (11) {
+                <div class="cartas p-2">
+                    <img id="J" src="../../../../../assets/cartas/11.png" width="300" height="375">
+                </div>
+            }
+            @case (12) {
+                <div class="cartas p-2">
+                    <img id="Q" src="../../../../../assets/cartas/12.png" width="300" height="375">
+                </div>
+            }
+            @case (13) {
+                <div class="cartas p-2">
+                    <img id="K" src="../../../../../assets/cartas/13.png" width="300" height="375">
+                </div>
+            }
+            
+        }
+        <div class="opciones">
+            <img style="left: 20px; position: absolute;" src="../../../../../assets/menor.png" width="100" (click)="Menor()">
+            <img style="right: 20px; position: absolute;" src="../../../../../assets/mayor.png" width="100" (click)="Mayor()">
+        </div>
+
+        <div class="tabla" style="position: absolute; bottom: 0;">
+            <p style="color: white; font-size: x-large;">Número de Aciertos: {{acerto}}</p>
+            <p style="color: white; font-size: x-large;">Cantidad máxima de aciertos: {{record}}</p>
+        </div>
+    }
+</div>

@@ -1,0 +1,121 @@
+body{
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32 px 0 rgba(0, 0, 0, 0.37);
+}
+
+h1 
+{
+  color: black;
+  text-align: center;
+  font-family: Algerian;
+  font-size: 250%;
+}
+
+.message
+{
+  color: black;
+  text-align: center;
+  font-family: Algerian;
+  font-size: 175%;
+  visibility: visible;
+}
+
+.letter_button
+{
+background-color: orange;
+border: yes;
+border-color: black;
+padding: 5px;
+font-family: Lato;
+text-align: center;
+margin: 2px 2px;
+}
+
+.letters_array
+{
+display: grid; 
+justify-content: center;
+grid-template-columns: 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px;
+}
+
+.start_button
+{
+background-color:rgb(31, 128, 173);
+border: yes;
+border-color: black;
+padding: 5px;
+text-align: center;
+font-family: Lato;
+font-size: 150%;
+}
+
+.restart_button
+{
+background-color:rgb(31, 128, 173);
+border: yes;
+border-color: black;
+padding: 5px;
+text-align: center;
+font-family: Lato;
+font-size: 150%;
+}
+
+.start_again_button
+{
+background-color:rgb(31, 128, 173);
+border: yes;
+border-color: black;
+padding: 5px;
+text-align: center;
+font-family: Lato;
+font-size: 150%;
+}
+
+
+.button_array
+{
+display: grid; 
+justify-content: center;
+grid-template-columns: 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px;
+}
+
+.lone_button
+{
+  margin: 30px 2px;
+  text-align: center;
+}
+
+.letter
+{
+  display: block; 
+  margin-top: 20px;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 125%;
+  color: black;
+  visibility: hidden;
+}
+
+._letter
+{
+  display: block; 
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 125%;
+  color: black;
+  visibility: visible;
+}
+
+.image
+{
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 25%;
+}

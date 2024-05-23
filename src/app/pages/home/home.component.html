@@ -1,0 +1,71 @@
+
+<div class="pt-5" align="center">
+    <nav class= "navbar navbar-expand-lg" 
+    style="
+    max-width: 600px;min-width: 300px;">
+    <!--aumentar el width y el max-width para mas espacio-->
+        <ul>
+            @if(estado){
+                <p style="position: absolute; right: auto; top: auto; color: white; font-size: large;">{{email}}</p>
+                <br><br><br><br><br><br><br><br><br>   
+            }
+        </ul>
+        <ul class="navbar-nav me-auto mb-2 lg-0">
+            <li class="nav-item">
+                <div class="container-fluid">
+                    <img class="nav-link active" aria-current="page" routerLink="app-ahorcado" src="../../../assets/6168592.png" width="100" height="100">
+                    <a style="color: white;" class="nav-link active" aria-current="page" routerLink="app-ahorcado">Ahorcado</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                    <div class="container-fluid">
+                    <img src="../../../assets/poker.png" width="100" height="100" class="nav-link active" aria-current="page" routerLink="app-mayor-menor">
+                    <a style="color: white;" class="nav-link active" aria-current="page" routerLink="app-mayor-menor">Mayor o Menor</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                    <div class="container-fluid">
+                    <img src="../../../assets/preguntados.png" width="100" height="100">
+                    <a style="color: white;" class="nav-link active" aria-current="page">Preguntados</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                    <div class="container-fluid">
+                    <img src="../../../assets/laberinto.png" width="100" height="100" class="nav-link active" aria-current="page" routerLink="app-maze">
+                    <a style="color: white;" class="nav-link active" aria-current="page" routerLink="app-maze">Laberinto</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<footer>
+    <nav class="navbar navbar-expand-lg" >
+        <ul>
+            <li class="li-lala">
+                <img src="../../../assets/Hotpot.png"
+                width="40" height="40"
+                class="nav-link active"
+                aria-current="page" routerLink="/quien-soy">
+                <p style="color: white;">lalal</p>
+            </li>
+            <li class="li-chat">
+                @if (estado) {
+                    <img 
+                    src="../../../assets/nuevo-mensaje.png"
+                    width="40" height="40" 
+                    class="nav-link active" 
+                    aria-current="page" routerLink="/chat">
+                }
+                @else {
+                    <img
+                    src="../../../assets/nuevo-mensaje.png"
+                    width="40" height="40" 
+                    class="img-chat nav-link active" 
+                    aria-current="page" routerLink="/login">
+                }
+                <p style="color: white;">CHAT</p>
+            </li>
+        </ul>
+    </nav>
+</footer>

@@ -1,0 +1,31 @@
+.navbar{
+    border-style:groove;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32 px 0 rgba(0, 0, 0, 0.37);
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.li-lala{
+    position: absolute;
+    left: 550px;
+}
+
+.li-chat{
+    
+    position: relative;
+    left: 750px;
+}
+
+.img-chat{
+    transform: scale(0.9);
+}

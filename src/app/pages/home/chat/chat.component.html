@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="card text-center cardConatiner">
+        <div class="card-header">
+            CHAT DE: {{usuarioLogueado.email}}
+        </div>
+        <div class="card-body">
+            <div id="contenedordeMensajes" class="contenedordeMensajes" style="max-height:400px">
+                <p style="color: white;">{{fecha}}</p>                
+                <div *ngFor="let mensaje of listaMensajes" class="mensaje p-2"
+                    [ngClass]="(usuarioLogueado.uid==mensaje.usuarioUID)? 'enviado': 'recibido'">
+                    <p>{{mensaje.mensaje}}</p>
+                    <p style="text-align: right;">{{mensaje.usuarioNombre}}</p> <p style="text-align: right;">{{mensaje.fecha}}
+                </div>
+                <div *ngFor="let mensaje of mensajes" class="mensaje p-2"
+                    [ngClass]="(usuarioLogueado.uid==mensaje.emisor)? 'enviado': 'recibido' ">
+                    <p>{{mensaje.texto}}</p>
+                    <p style="text-align: right;">{{mensaje.nombre}}</p> <p style="text-align: right;">{{fecha}}</p>
+            </div>
+            </div>
+            <div>
+                <form class="card-footer text muted input-group" [formGroup]="chatForm" novalidate>
+                    <div class="input-group mb-3">
+                        <input type="text" 
+                        class="form-control" 
+                        placeholder="Ingrese su mensaje..."
+                        formControlName="nuevoMensaje">                                              
+                        <div class="input-group-append" (click)="onSend()">
+                            <span class="input-group-text" id="basic-addon2">
+                                <img class="imgEnviar" src="../../../../assets/enviar-mensaje.png" widht="20" height="25">
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

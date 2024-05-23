@@ -1,0 +1,69 @@
+<body>
+    <h1>{{title}}</h1>
+
+    <div class="letters_array">
+    <p id="l_0" class="letter">{{chosenWord[0]}}</p>
+    <p id="l_1" class="letter">{{chosenWord[1]}}</p>
+    <p id="l_2" class="letter">{{chosenWord[2]}}</p>
+    <p id="l_3" class="letter">{{chosenWord[3]}}</p>
+    <p id="l_4" class="letter">{{chosenWord[4]}}</p>
+    <p id="l_5" class="letter">{{chosenWord[5]}}</p>
+    <p id="l_6" class="letter">{{chosenWord[6]}}</p>
+    <p id="l_7" class="letter">{{chosenWord[7]}}</p>
+    <p id="l_8" class="letter">{{chosenWord[8]}}</p>
+    <p id="l_9" class="letter">{{chosenWord[9]}}</p>
+    </div>
+
+    <div class="letters_array">
+    <p class="_letter">{{wordBottom[0]}}</p>
+    <p class="_letter">{{wordBottom[1]}}</p>
+    <p class="_letter">{{wordBottom[2]}}</p>
+    <p class="_letter">{{wordBottom[3]}}</p>
+    <p class="_letter">{{wordBottom[4]}}</p>
+    <p class="_letter">{{wordBottom[5]}}</p>
+    <p class="_letter">{{wordBottom[6]}}</p>
+    <p class="_letter">{{wordBottom[7]}}</p>
+    <p class="_letter">{{wordBottom[8]}}</p>
+    <p class="_letter">{{wordBottom[9]}}</p>
+    </div>
+
+    <div class="button_array">
+    <button class="letter_button" id="0">A</button>
+    <button class="letter_button" id="1">B</button>
+    <button class="letter_button" id="2">C</button>
+    <button class="letter_button" id="3">D</button>
+    <button class="letter_button" id="4">E</button>
+    <button class="letter_button" id="5">F</button>
+    <button class="letter_button" id="6">G</button>
+    <button class="letter_button" id="7">H</button>
+    <button class="letter_button" id="8">I</button>
+    <button class="letter_button" id="9">J</button>
+    <button class="letter_button" id="10">K</button>
+    <button class="letter_button" id="11">L</button>
+    <button class="letter_button" id="12">M</button>
+    <button class="letter_button" id="13">N</button>
+    <button class="letter_button" id="14">O</button>
+    <button class="letter_button" id="15">P</button>
+    <button class="letter_button" id="16">Q</button>
+    <button class="letter_button" id="17">R</button>
+    <button class="letter_button" id="18">S</button>
+    <button class="letter_button" id="19">T</button>
+    <button class="letter_button" id="20">U</button>
+    <button class="letter_button" id="21">V</button>
+    <button class="letter_button" id="22">W</button>
+    <button class="letter_button" id="23">X</button>
+    <button class="letter_button" id="24">Y</button>
+    <button class="letter_button" id="25">Z</button>
+    </div>
+
+    @if(started == false || finished == true){
+        <div class="lone_button">
+            <button class="start_button" id="start" (click)="game_start()">JUGAR</button>
+        </div>
+    }   
+
+    <p class="message" id="message">{{message}}</p>
+
+    <img class ="image" id="forca" src="https://i.imgur.com/JoRWXM0.png">
+
+</body>

@@ -1,0 +1,60 @@
+<div class="pt-5" align="center">
+    <main class="form-signin w-100 m-auto">
+      <h1 class="h3 mb-3 fw-normal">Cree su cuenta</h1>
+      <form [formGroup]="registroForm" novalidate>
+        <div class="imagen">
+          <img class="mb-4" src="../../../assets/user.png" alt="" width="72" height="57">
+        </div>
+        <div class="form-floating">
+          <input type="email" class="form-control" formControlName="email"  placeholder="nombre@ejemplo.com">
+          <label for="floatingInput">Email</label>
+          <div *ngIf="this.registroForm.controls?.['email']?.invalid && this.registroForm.controls?.['email']?.touched">
+            <h6 *ngIf="errorControl['email'].errors?.['required']">
+              Este campo está vacío
+            </h6>
+            <h6 *ngIf="errorControl['email'].errors?.['pattern']">
+            Formato no válido
+            </h6>
+          </div>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" formControlName="password" placeholder="Contraseña">
+          <label for="floatingPassword">Contraseña</label>
+          <div *ngIf="this.registroForm.controls?.['password']?.touched && this.registroForm.controls?.['password']?.invalid">
+            <h6 *ngIf="errorControl['password'].errors?.['required']">
+              Este campo está vacío
+            </h6>
+            <h6 *ngIf="errorControl['password'].errors?.['pattern']">
+              La contraseña debería ser de 8 dígitos y contener al menos:
+              Un caracter, Una letra mayúscula, Un número
+            </h6>
+          </div>
+        </div>
+        Por favor, ingrese nuevamente su Contraseña:
+        <div class="form-floating">
+          <input type="password" class="form-control" formControlName="password2" placeholder="Contraseña">
+          <label for="floatingPassword">Repetir Contraseña</label>
+          <div *ngIf="this.registroForm.controls?.['password']?.touched && this.registroForm.controls?.['password']?.invalid">
+            <h6 *ngIf="errorControl['password'].errors?.['required']">
+              Este campo está vacío
+            </h6>
+            <h6 *ngIf="errorControl['password'].errors?.['pattern']">
+              La contraseña debería ser de 8 dígitos y contener al menos:
+              Un caracter, Una letra mayúscula, Un número
+            </h6>
+          </div>
+        </div>
+    
+        <button class="btn btn-primary w-100 py-2" type="submit" (click)="Registrar()">Registrarse</button>
+
+        <div class="form-group" style="color: white;">
+          ¿Ya tiene una cuenta?
+          <a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">iniciar Sesión</a>
+        </div>
+    
+        <p class="mt-5 mb-3 text-body-secondary">&copy; 2024</p>
+    
+      </form>
+    
+    </main>
+    </div>

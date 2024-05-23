@@ -1,0 +1,35 @@
+<body>
+  <div style="text-align: center;">
+    <div class="maze-form">
+      <label style="color: white; font-size: medium;" for="nRow">Cantidad de Filas:</label>
+      <input class="filasColumnas" id="nRow" type="number" [(ngModel)]="row" />
+      <label style="color: white; font-size: medium;" for="nCol">Cantidad ed Columnas:</label>
+      <input class="filasColumnas" id="nCol" type="number" [(ngModel)]="col" />
+      <button class="button" type="button" (click)="drawMaze()">Laberinto Nuevo</button>
+      <button class="button" type="button" (click)="solution()">Solución</button>
+      <br><br><br>
+    </div>
+    <section>
+      <canvas id="maze"></canvas>
+    </section>
+    <section>
+      <div class="arrows">
+        <div><img src="../../../../../assets/flecha-hacia-arriba.png"
+              width="50" height="50"
+              (click)="move('Up')">
+        </div>
+        <div>
+          <img src="../../../../../assets/flecha-izquierda.png"
+              width="50" height="50"
+              (click)="move('Left')">
+              <img src="../../../../../assets/flecha-correcta.png"
+              width="50" height="50"
+              (click)="move('Right')">
+        </div>
+        <div><img src="../../../../../assets/flecha-hacia-abajo.png"
+          width="50" height="50"
+          (click)="move('Down')"></div>
+      </div>
+    </section>
+  </div>
+</body>

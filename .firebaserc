@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sala-de-juegos-324cb": {
+      "hosting": {
+        "saladejuegos": [
+          "sala-de-juegos-324cb"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sala-de-juegos-324cb"
+  }
+}
